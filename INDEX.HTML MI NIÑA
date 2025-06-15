@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>5 Meses Contigo ❤️</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background: #ffe6f0;
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-top: 40px;
+      color: #b30059;
+    }
+
+    .boton-carta {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    button {
+      background-color: #ff66a3;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff66a3;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #cc0052;
+    }
+
+    .poema {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fffef0;
+      padding: 40px 50px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      font-size: 1.2em;
+      color: #333;
+      line-height: 1.6;
+      display: none;
+      border: 1px solid #ddd;
+      background-image: linear-gradient(to bottom, transparent 95%, rgba(0,0,0,0.03) 96%);
+      background-size: 100% 2em;
+      animation: aparecer 1s ease forwards;
+      transform: scale(0.95);
+      opacity: 0;
+    }
+
+    @keyframes aparecer {
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>5 Meses Contigo ❤️</h1>
+
+  <div class="boton-carta">
+    <button onclick="mostrarCarta(this)">Ver carta 💌</button>
+  </div>
+
+  <div class="poema" id="carta">
+    <p>Mi amor:</p>
+    <p>
+      Hoy celebramos cinco meses juntos, y aún me cuesta creer la suerte que tengo de tenerte en mi vida. En este tiempo me has enseñado lo que realmente significa amar: cuidar, respetar, reír, acompañar, y construir.
+    </p>
+    <p>
+      Contigo, cada día es un regalo. Me haces feliz con solo existir. Tu sonrisa es mi sol, tu voz mi paz, y tu abrazo el hogar al que siempre quiero volver. En tus ojos veo mi presente más bonito y el futuro con el que siempre soñé: un futuro contigo.
+    </p>
+    <p>
+      Gracias por estos cinco meses. Gracias por cada palabra bonita, cada mirada cómplice, cada risa compartida. Gracias por amarme y dejarme amarte. Gracias por hacerme tan feliz.
+    </p>
+    <p>Con todo mi amor eterno,</p>
+    <p>Tu morenito 🤍</p>
+  </div>
+
+  <audio autoplay loop>
+    <source src="imagenes/cancion.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML.
+  </audio>
+
+  <script>
+    function mostrarCarta(boton) {
+      const carta = document.getElementById('carta');
+      carta.style.display = 'block';
+      boton.style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
